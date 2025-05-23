@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montlar - EA MOTO SHOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Üst Menü -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">EA MOTO SHOP</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="kasklar.html" class="dropbtn">Kasklar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="kasklar.html?marka=agv">AGV Kasklar</a>
+                    <a href="kasklar.html?marka=shoei">Shoei Kasklar</a>
+                    <a href="kasklar.html?marka=ls2">LS2 Kasklar</a>
+                    <a href="kasklar.html?marka=nolan">Nolan Kasklar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="montlar.html" class="dropbtn">Montlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="montlar.html?tur=deri">Deri Montlar</a>
+                    <a href="montlar.html?tur=tekstil">Tekstil Montlar</a>
+                    <a href="montlar.html?tur=yazlik">Yazlık Montlar</a>
+                    <a href="montlar.html?tur=kislik">Kışlık Montlar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="interkomlar.html" class="dropbtn">İnterkomlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="interkomlar.html?marka=sena">Sena İnterkom</a>
+                    <a href="interkomlar.html?marka=midland">Midland İnterkom</a>
+                    <a href="interkomlar.html?marka=cardo">Cardo İnterkom</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="aksesuarlar.html" class="dropbtn">Aksesuarlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="aksesuarlar.html?tur=eldiven">Eldivenler</a>
+                    <a href="aksesuarlar.html?tur=bot">Botlar</a>
+                    <a href="aksesuarlar.html?tur=dizlik">Dizlikler</a>
+                    <a href="aksesuarlar.html?tur=yagmurluk">Yağmurluklar</a>
+                </div>
+            </li>
+        </ul>
+        <div class="shopping-cart" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Sepet Paneli -->
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button onclick="toggleCart()" class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Sepet öğeleri buraya dinamik olarak eklenecek -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Toplam:</span>
+                <span class="total-price">0 TL</span>
+            </div>
+            <button class="checkout-btn">Ödemeye Geç</button>
+        </div>
+    </div>
+
+    <!-- Ana İçerik -->
+    <div class="content">
+        <h1 class="page-title">Montlar</h1>
+        
+        <!-- Filtreler -->
+        <div class="filters">
+            <select class="filter-select">
+                <option value="">Mont Türü</option>
+                <option value="deri">Deri Mont</option>
+                <option value="tekstil">Tekstil Mont</option>
+                <option value="yazlik">Yazlık Mont</option>
+                <option value="kislik">Kışlık Mont</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Fiyat Aralığı</option>
+                <option value="0-1000">0 - 1000 TL</option>
+                <option value="1000-2000">1000 - 2000 TL</option>
+                <option value="2000-5000">2000 - 5000 TL</option>
+                <option value="5000+">5000 TL ve üzeri</option>
+            </select>
+        </div>
+
+        <!-- Ürün Listesi -->
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/mont1.jpg" alt="Deri Mont">
+                <div class="product-info">
+                    <h3 class="product-title">Dainese Deri Mont</h3>
+                    <p>Premium İtalyan deri, koruma pedleri</p>
+                    <div class="product-price">4.999 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/mont2.jpg" alt="Tekstil Mont">
+                <div class="product-info">
+                    <h3 class="product-title">Revit Tekstil Mont</h3>
+                    <p>Su geçirmez, nefes alabilir kumaş</p>
+                    <div class="product-price">3.499 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/mont3.jpg" alt="Yazlık Mont">
+                <div class="product-info">
+                    <h3 class="product-title">Alpinestars Yazlık Mont</h3>
+                    <p>Havalandırmalı, hafif tasarım</p>
+                    <div class="product-price">2.999 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/mont4.jpg" alt="Kışlık Mont">
+                <div class="product-info">
+                    <h3 class="product-title">Tucano Kışlık Mont</h3>
+                    <p>Termal astarlı, rüzgar geçirmez</p>
+                    <div class="product-price">3.799 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EA MOTO SHOP</h3>
+                <p>Kaliteli motor parçaları ve aksesuarları</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="kasklar.html">Kasklar</a></li>
+                    <li><a href="montlar.html">Montlar</a></li>
+                    <li><a href="interkomlar.html">İnterkomlar</a></li>
+                    <li><a href="aksesuarlar.html">Aksesuarlar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 555 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@eamotoshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EA MOTO SHOP. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

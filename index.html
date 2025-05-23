@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA MOTO SHOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Üst Menü -->
+    <nav class="navbar">
+        <a href="index.html" class="logo">EA MOTO SHOP</a>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="kasklar.html" class="dropbtn">Kasklar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="kasklar.html?marka=agv">AGV Kasklar</a>
+                    <a href="kasklar.html?marka=shoei">Shoei Kasklar</a>
+                    <a href="kasklar.html?marka=ls2">LS2 Kasklar</a>
+                    <a href="kasklar.html?marka=nolan">Nolan Kasklar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="montlar.html" class="dropbtn">Montlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="montlar.html?tur=deri">Deri Montlar</a>
+                    <a href="montlar.html?tur=tekstil">Tekstil Montlar</a>
+                    <a href="montlar.html?tur=yazlik">Yazlık Montlar</a>
+                    <a href="montlar.html?tur=kislik">Kışlık Montlar</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="interkomlar.html" class="dropbtn">İnterkomlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="interkomlar.html?marka=sena">Sena İnterkom</a>
+                    <a href="interkomlar.html?marka=midland">Midland İnterkom</a>
+                    <a href="interkomlar.html?marka=cardo">Cardo İnterkom</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="aksesuarlar.html" class="dropbtn">Aksesuarlar <i class="fas fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="aksesuarlar.html?tur=eldiven">Eldivenler</a>
+                    <a href="aksesuarlar.html?tur=bot">Botlar</a>
+                    <a href="aksesuarlar.html?tur=dizlik">Dizlikler</a>
+                    <a href="aksesuarlar.html?tur=yagmurluk">Yağmurluklar</a>
+                </div>
+            </li>
+        </ul>
+        <div class="shopping-cart" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <!-- Sepet Paneli -->
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button onclick="toggleCart()" class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Sepet öğeleri buraya dinamik olarak eklenecek -->
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>Toplam:</span>
+                <span class="total-price">0 TL</span>
+            </div>
+            <button class="checkout-btn">Ödemeye Geç</button>
+        </div>
+    </div>
+
+    <!-- Ana İçerik Alanı -->
+    <div class="content">
+        <!-- Kategoriye göre ürünler burada gösterilecek -->
+    </div>
+
+    <!-- Ana Banner -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>EA MOTO SHOP</h1>
+            <p>Motosiklet Tutkunları İçin En İyi Aksesuarlar</p>
+            <a href="#kategoriler" class="cta-button">Ürünleri Keşfet</a>
+        </div>
+    </header>
+
+    <!-- Kategoriler -->
+    <section class="categories" id="kategoriler">
+        <h2>Kategoriler</h2>
+        <div class="category-grid">
+            <a href="kasklar.html" class="category-card">
+                <i class="fas fa-helmet-safety"></i>
+                <h3>Kasklar</h3>
+                <p>Güvenliğiniz için en kaliteli kasklar</p>
+            </a>
+            <a href="montlar.html" class="category-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Montlar</h3>
+                <p>Her mevsim için özel tasarım montlar</p>
+            </a>
+            <a href="interkomlar.html" class="category-card">
+                <i class="fas fa-headset"></i>
+                <h3>İnterkomlar</h3>
+                <p>Kesintisiz iletişim için interkom sistemleri</p>
+            </a>
+            <a href="aksesuarlar.html" class="category-card">
+                <i class="fas fa-tools"></i>
+                <h3>Aksesuarlar</h3>
+                <p>Motosikletiniz için en şık aksesuarlar</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan Ürünler -->
+    <section class="featured-products" id="urunler">
+        <h2>Öne Çıkan Ürünler</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/kask1.jpg" alt="AGV K1 Kask">
+                <div class="product-info">
+                    <h3 class="product-title">AGV K1 Kask</h3>
+                    <p>Profesyonel yarış kaskı, çizilmez vizör</p>
+                    <div class="product-price">3.999 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/mont1.jpg" alt="Deri Mont">
+                <div class="product-info">
+                    <h3 class="product-title">Deri Mont</h3>
+                    <p>Su geçirmez koruyucu mont</p>
+                    <div class="product-price">2.499 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/eldiven1.jpg" alt="Pro Eldiven">
+                <div class="product-info">
+                    <h3 class="product-title">Pro Eldiven</h3>
+                    <p>Dokunmatik uyumlu eldiven</p>
+                    <div class="product-price">599 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="images/interkom1.jpg" alt="Sena 50S">
+                <div class="product-info">
+                    <h3 class="product-title">Sena 50S İnterkom</h3>
+                    <p>Mesh 2.0 teknolojili interkom</p>
+                    <div class="product-price">4.999 TL</div>
+                    <button class="add-to-cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="contact" id="iletisim">
+        <h2>İletişim</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3><i class="fas fa-info-circle"></i> İletişim Bilgilerimiz</h3>
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Adres</h4>
+                        <p>Motosiklet Caddesi No:123<br>Mecidiyeköy / İstanbul</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p>+90 555 123 4567</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>E-posta</h4>
+                        <p>info@eamotoshop.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Çalışma Saatleri</h4>
+                        <p>Pazartesi - Cumartesi: 09:00 - 18:00<br>Pazar: Kapalı</p>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <h3><i class="fas fa-paper-plane"></i> Bize Ulaşın</h3>
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon Numaranız</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Mesaj Gönder
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Alt Bilgi -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EA MOTO SHOP</h3>
+                <p>Kaliteli motor parçaları ve aksesuarları</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="#">Kasklar</a></li>
+                    <li><a href="#">Montlar</a></li>
+                    <li><a href="#">İnterkomlar</a></li>
+                    <li><a href="#">Aksesuarlar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fas fa-phone"></i> +90 555 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@eamotoshop.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EA MOTO SHOP. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
